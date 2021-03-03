@@ -1,19 +1,30 @@
 {
   "name": "use-material-ui-spacing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TailwindCSS like spacing for Material-UI",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
     "build": "tsc -p ."
   },
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielturus/use-material-ui-spacing/issues"
+  },
+  "repository": "danielturus/use-material-ui-spacing",
+  "homepage": "https://github.com/danielturus/use-material-ui-spacing",
+  "author": "Daniel Turuș",
+  "license": "MIT",
   "dependencies": {},
   "peerDependencies": {
     "@material-ui/core": "^4.11.3"
   },
   "devDependencies": {
     "typescript": "^4.1.5"
-  }
+  },
+  "keywords": [
+    "Material-UI",
+    "TailwindCSS",
+    "spacing",
+    "React hooks"
+  ]
 }

@@ -29,11 +29,16 @@ $ yarn add use-material-ui-spacing
 In your React component:
 
 ```js
+import clsx from 'clsx'
 import { useSpacing } from 'use-material-ui-spacing'
 
 function Button({ children }) {
   const [px2, py1, mt3, m4] = useSpacing('px2', 'py1', 'mt3', 'm4')
 
-  return <button className={(px2, py1, mt3, m4)}>{children}</button>
+  return <button className={clsx(px2, py1, mt3, m4)}>{children}</button>
 }
 ```
+
+## License
+
+[MIT](LICENSE)
