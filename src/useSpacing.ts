@@ -1,20 +1,20 @@
 import { makeStyles, useTheme } from '@material-ui/core'
 import { AVAILABLE_POSITIONS } from './constants/spacing'
 
-type SpacingType = 'm' | 'p'
+export type SpacingType = 'm' | 'p'
 type Position = 't' | 'r' | 'b' | 'l' | 'x' | 'y'
 type SpacingValue = number
 
-export function useSpacing() {
-  const { spacing } = useTheme()
-  if (!arguments.length) {
+export function useSpacing(...args: string[]) {
+  if (!args.length) {
     throw new Error('No value provided')
   }
+  const { spacing } = useTheme()
 
   const generatedClasses: string[] = []
 
-  for (let i = 0; i < arguments.length; i++) {
-    const expression = arguments[i]
+  for (let i = 0; i < args.length; i++) {
+    const expression = args[i]
     const { spacingType, position, value } = extractSpacingElements(expression)
     const getStyle = AVAILABLE_POSITIONS(spacingType)
     const providedOption = getStyle[position]
@@ -22,6 +22,7 @@ export function useSpacing() {
     if (!providedOption) {
       throw new Error('Provided option is not valid')
     }
+
     const spacingValue = spacing(value)
     const styles = providedOption(spacingValue)
     const useStyles = makeStyles({ root: styles })

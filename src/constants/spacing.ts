@@ -1,4 +1,6 @@
-export const AVAILABLE_POSITIONS = (typeOfAlignment: 'm' | 'p') => {
+import { SpacingType } from '../useSpacing'
+
+export const AVAILABLE_POSITIONS = (typeOfAlignment: SpacingType) => {
   const typeOfSpacing = typeOfAlignment === 'm' ? 'margin' : 'padding'
 
   return {
