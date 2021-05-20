@@ -1,6 +1,6 @@
 {
   "name": "use-material-ui-spacing",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "TailwindCSS like spacing for Material-UI",
   "main": "lib/index.js",
   "types": "lib",
