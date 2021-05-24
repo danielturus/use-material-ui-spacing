@@ -4,8 +4,9 @@ import { AVAILABLE_POSITIONS } from './constants/spacing'
 export type SpacingType = 'm' | 'p'
 type Position = 't' | 'r' | 'b' | 'l' | 'x' | 'y'
 type SpacingValue = number
+type SpacingArgument = `${SpacingType}${Position}${SpacingValue}`
 
-export function useSpacing(...args: string[]) {
+export function useSpacing(...args: SpacingArgument[]) {
   if (!args.length) {
     throw new Error('No value provided')
   }
